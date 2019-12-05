@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    font-family: "Trebuchet MS", sans-serif;
+    background: skyblue;
+    line-height: 1.7;
+    font-size: 1.2rem;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 800px;
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    -webkit-box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    -moz-box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+    background: #f9feff;
+    padding: 1rem;
+}
+
+main,
+table {
+    width: 100%;
+}
+
+nav .hide {
+    visibility: hidden;
+}
+
+th {
+    font-weight: bolder;
+}
+
+thead tr {
+    border-bottom: 2px solid #000000;
+}
+
+th,
+td {
+    text-align: left;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: #dee9fa;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 768px) {
+
+    tr,
+    td {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    td {
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+
+    td:before {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+    }
+
+    td:nth-of-type(1):before {
+        content: "💰 Coin";
+    }
+
+    td:nth-of-type(2):before {
+        content: "📄 Code";
+    }
+
+    td:nth-of-type(3):before {
+        content: "🤑 Price";
+    }
+
+    td:nth-of-type(4):before {
+        content: "📉 Total Supply";
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #f9feff;
+}
+
+nav button {
+    border: px solid #000;
+    border-radius: 4px;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: skyblue;
+}
+
+nav i {
+    font-size: 0.9rem;
+}
